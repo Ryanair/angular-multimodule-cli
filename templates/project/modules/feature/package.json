@@ -1,0 +1,14 @@
+{
+  "name": "[SCOPE]/feature",
+  "version": "0.0.0",
+  "description": "",
+  "module": "[SCOPE]/feature.es5.js",
+  "es2015": "[SCOPE]/feature.js",
+  "main": "bundles/feature.umd.js",
+  "typings": "feature.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "[SCOPE]/core": "^0.0.0",
+    "rxjs": "^5.0.0"
+  }
+}
