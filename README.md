@@ -38,11 +38,11 @@ modules together
 
 ## TODO
 
-* [] Choose package manager ( default is yarn )
-* [] Create a playground ( maybe based on angularplayground )
-* [] Improve README
-* [] Ask for modules to create at the start
-* [] Add command to create a module on already created project
-* [] Add unit tests
-* [] Ask for author
-* [] Docs generation
+* [  ] Choose package manager ( default is yarn )
+* [  ] Create a playground ( maybe based on angularplayground )
+* [  ] Improve README
+* [  ] Ask for modules to create at the start
+* [  ] Add command to create a module on already created project
+* [  ] Add unit tests
+* [  ] Ask for author
+* [  ] Docs generation
