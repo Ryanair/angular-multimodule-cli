@@ -9,7 +9,6 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "ci": "yarn run test:coverage && yarn lint && yarn stylelint && yarn run build",
     "clean": "git clean -xdf && yarn && yarn run bootstrap",
-    "cli": "ng",
     "cz": "git cz",
     "lint": "tslint -e \\**/node_modules/**\\ --type-check --project tsconfig.json",
     "prettier": "prettier --parser typescript --single-quote --trailing-comma es5 --write \"./modules/**/*.ts\"",
@@ -42,7 +41,6 @@
   },
   "devDependencies": {
     "@angular/animations": "^4.4.3",
-    "@angular/cli": "^1.4.3",
     "@angular/common": "^4.4.3",
     "@angular/compiler": "^4.2.0",
     "@angular/compiler-cli": "^4.4.3",
