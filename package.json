@@ -12,7 +12,8 @@
     "prebuild": "rimraf ./dist",
     "build": "tsc",
     "precommit": "lint-staged",
-    "lint": "tslint --type-check --project tsconfig.json"
+    "lint": "tslint --type-check --project tsconfig.json",
+    "release": "standard-version"
   },
   "dependencies": {
     "caporal": "^0.7.0",
@@ -31,6 +32,7 @@
     "lint-staged": "^4.2.3",
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2",
+    "standard-version": "^4.2.0",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.5.0",
     "typescript": "^2.5.3"
