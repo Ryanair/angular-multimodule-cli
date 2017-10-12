@@ -1,7 +1,7 @@
 angular-multimodule-cli will help you create and maintain multiple
 npm modules in a single repository.
 
-Why you should use this cli?
+Why you should use this cli? https://izifortune.com/managing-modules-with-angular/
 
 Based upon [@ngrx/platform](https://github.com/ngrx/platform) build system.
 
