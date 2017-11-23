@@ -1,6 +1,7 @@
 import {
   copy,
   ensureDir,
+  move,
   readFile,
   readJSON,
   writeFile,
@@ -30,6 +31,8 @@ const TEMPLATE_FILES = [
   'modules/feature/src/basket.module.ts'
 ];
 
+const DOT_FILES = ['_angular-cli.json', '_editorconfig', '_gitignore'];
+
 /**
  * Replace occurencies of the KEY with the value passed
  */
@@ -38,6 +41,14 @@ async function replace(filePath: string, KEY: string, value: string) {
   const regex = new RegExp(`${KEY}`, 'g');
   const res = index.replace(regex, value);
   return writeFile(filePath, res);
+}
+
+async function renameDotFiles(basePath: string) {
+  return Promise.all(
+    DOT_FILES.map(file =>
+      move(join(basePath, file), join(basePath, file.replace('_', '.')))
+    )
+  );
 }
 
 /**
@@ -66,6 +77,8 @@ export async function newCommand(
   const answers = await inquirer.prompt(QUESTIONS);
 
   const values = [answers.scope, answers.scope.replace('@', ''), args.name];
+
+  await renameDotFiles(args.name);
 
   await execTask('Replace templates', () =>
     Promise.all(
