@@ -5,6 +5,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "ts-node ./build/index.ts",
+    "postbuild": "rimraf dist/**/*.ngsummary.json dist/**/src/*.ngsummary.json",
     "precommit": "lint-staged",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "ci": "yarn run test:coverage && yarn lint && yarn stylelint && yarn run build",
@@ -40,17 +41,17 @@
     }
   },
   "devDependencies": {
-    "@angular/animations": "^4.4.3",
-    "@angular/common": "^4.4.3",
-    "@angular/compiler": "^4.2.0",
-    "@angular/compiler-cli": "^4.4.3",
-    "@angular/core": "^4.4.3",
-    "@angular/forms": "^4.4.3",
-    "@angular/http": "^4.4.3",
-    "@angular/platform-browser": "^4.2.0",
-    "@angular/platform-browser-dynamic": "^4.4.3",
-    "@angular/platform-server": "^4.4.3",
-    "@angular/router": "^4.2.0",
+    "@angular/animations": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/http": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/platform-server": "^5.0.0",
+    "@angular/router": "^5.0.0",
     "@types/autoprefixer": "^6.7.3",
     "@types/fs-extra": "^4.0.2",
     "@types/glob": "^5.0.32",
@@ -98,7 +99,7 @@
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.5.0",
     "typescript": "^2.5.2",
-    "uglify-js": "^2.8.22",
+    "uglify-js": "^3.1.9",
     "zone.js": "^0.8.17"
   },
   "dependencies": {
@@ -145,5 +146,10 @@
       "!modules/**/public_api.ts",
       "!modules/**/*.module.ts"
     ]
+  },
+  "engines": {
+    "node": ">=8.6.0",
+    "npm": ">=5.3.0",
+    "yarn": ">=1.1.0 <2.0.0"
   }
 }
